@@ -1,0 +1,199 @@
+/* USER VARIABLES SECTION */
+
+:root {
+  --accent: #FF5A30;
+  --divider-gradient: rgba(218, 219, 221, 0);
+  --success: #03CEA4;
+  --danger: #FF4242;
+  --warning: #F89828;
+  --info: #5A87FC;
+  --text: #424551;
+  --gray-900: #1E212C;
+  --gray-800: #424551;
+  --gray-700: #787A80;
+  --gray-600: #9A9CA5;
+  --gray-500: #B3B7BC;
+  --gray-400: #D7DADD;
+  --gray-300: #E5E8ED;
+  --gray-200: #F4F5F6;
+  --gray-100: #F9F9F9;
+  --regular-text: 16px;
+  --lineheight: 1.60;
+  --second-font: 'Lato', sans-serif;
+  --userfont: 'Ubuntu', sans-serif;
+  --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: .625rem;
+}
+
+.row,
+.row>* {
+  --bs-gutter-x: 1.25rem;
+}
+
+
+/* GENERAL CSS SETTINGS */
+
+a {
+  text-decoration: none;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+
+body {
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  line-height: var(--lineheight);
+  color: var(--text);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 20px;
+  background: url(../images/background.jpg) no-repeat center center / cover;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.header__logo {}
+
+.header__nav {}
+
+.nav {
+  margin-left: 60px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {}
+
+.nav__link {
+  color: var(--gray-800);
+  transition: .25s ease-out;
+  padding: 0 20px;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--accent);
+}
+
+.header__soc {
+  display: flex;
+  column-gap: 36px;
+}
+
+.soc {}
+
+.soc__item {
+  display: flex;
+  align-items: center;
+}
+
+.soc__image {}
+
+.soc__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.soc__text span {
+  font-size: 14px;
+  color: var(--gray-800);
+  line-height: 21px;
+}
+
+.soc__text a {
+  color: var(--gray-900);
+}
+
+.header__breadcrumb {
+  margin-bottom: 40px;
+}
+
+.header__breadcrumb a {
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: var(--gray-600);
+}
+
+.header__breadcrumb a.home {
+  padding-right: 22px;
+  position: relative;
+  color: var(--gray-800);
+}
+
+.header__breadcrumb a.home::after {
+  content: '/';
+  position: absolute;
+  right: 5px;
+  top: -3px;
+  color: var(--gray-600);
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.header__subtitle {
+  max-width: 600px;
+  font-size: 20px;
+}
