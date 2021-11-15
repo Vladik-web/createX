@@ -1,0 +1,116 @@
+.btn {
+  transition: var(--transition);
+  display: inline-block;
+  border: 1px solid transparent;
+  font-weight: bold;
+  color: var(--white);
+  line-height: 52px;
+  font-weight: 700;
+  background-color: var(--accent);
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn--large {
+  padding: 0 40px;
+  font-size: 16px;
+  line-height: 52px;
+}
+
+.btn--regular {
+  padding: 0 32px;
+  font-size: 14px;
+  line-height: 44px;
+}
+
+.btn--small {
+  font-size: 12px;
+  line-height: 36px;
+  padding: 0 24px;
+}
+
+.btn.btn--trans,
+.btn.btn--trans,
+.btn.btn--trans {
+  background-color: var(--white);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn.btn--opacity {
+  border-color: var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.btn.btn--small:hover,
+.btn.btn--regular:hover,
+.btn.btn--large:hover,
+.btn.btn--small:focus,
+.btn.btn--regular:focus,
+.btn.btn--large:focus {
+  background-color: var(--white);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn.btn--trans:hover,
+.btn.btn--trans:focus {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.btn-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.btn-circle.btn-circle--opacity {
+  background-color: rgba(218, 219, 221, 0.7);
+}
+
+.btn-circle:hover .btn-circle--opacity {
+  background-color: red;
+}
+
+.btn-circle.btn-circle--opacity:hover,
+.btn-circle.btn-circle--opacity:focus {
+  background: rgba(218, 219, 221, 1);
+  transform: scale(1.11);
+}
+
+.btn-circle.btn--accent:hover,
+.btn-circle.btn--accent:focus {
+  transform: scale(1.11);
+  background: var(--accent);
+}
+
+.btn-circle.btn--accent:hover svg path,
+.btn-circle.btn--accent:focus svg path {
+  fill: var(--white);
+}
+
+.sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  padding: 85px 0;
+}
+
+.sub h3 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 28px;
+  line-height: 150%;
+  color: var(--gray-900);
+}
