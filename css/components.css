@@ -1,3 +1,7 @@
+.none {
+  display: none;
+}
+
 .btn {
   transition: var(--transition);
   display: inline-block;
@@ -30,6 +34,11 @@
   padding: 0 24px;
 }
 
+.btn--mini {
+  padding: 8px;
+  line-height: 0;
+}
+
 .btn.btn--trans,
 .btn.btn--trans,
 .btn.btn--trans {
@@ -47,9 +56,11 @@
 .btn.btn--small:hover,
 .btn.btn--regular:hover,
 .btn.btn--large:hover,
+.btn.btn--mini:hover,
 .btn.btn--small:focus,
 .btn.btn--regular:focus,
-.btn.btn--large:focus {
+.btn.btn--large:focus,
+.btn.btn--mini:focus {
   background-color: var(--white);
   color: var(--accent);
   border: 1px solid var(--accent);
@@ -113,4 +124,8 @@
   font-size: 28px;
   line-height: 150%;
   color: var(--gray-900);
+}
+
+.supported__head {
+  margin-bottom: 60px;
 }
