@@ -15,6 +15,16 @@
 /* lg <= Extra large (xl) */
 
 @media (max-width: 1200px) {
+  .news__first-side {
+    grid-column: 1 / 7;
+  }
+  .news__second-side,
+  .news__third-side {
+    grid-column: 7/-1;
+  }
+  .reviews__photo {
+    width: 400px;
+  }
   .our__grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 250px;
@@ -25,12 +35,65 @@
   .nav {
     margin: 0 auto;
   }
+  .supported {
+    height: 1000px;
+  }
 }
 
 
 /* md <= Large (lg) */
 
 @media (max-width: 992px) {
+  .news {
+    position: relative;
+    z-index: 1000;
+  }
+  .news__grid {
+    grid-template-rows: 1fr;
+  }
+  .news__first-side p {
+    display: none;
+  }
+  .news__first-side {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .news__second-side {
+    grid-column: 5/9;
+  }
+  .news__third-side {
+    grid-column: 9/-1;
+  }
+  .news__second-side,
+  .news__third-side {
+    grid-row: 1/2;
+  }
+  .news__first-side img,
+  .news__second-side img,
+  .news__third-side img {
+    width: 100%;
+    height: 150px;
+  }
+  .news__date {
+    font-size: 10px;
+    flex-direction: column;
+  }
+  .span-line::after {
+    content: none;
+  }
+  .news__text {
+    padding: 10px;
+  }
+  .news__text a {
+    font-size: 18px;
+  }
+  .reviews__photo {
+    width: 350px;
+  }
+  .supported__list {
+    grid-template-columns: repeat(3, 120px);
+    row-gap: 30px;
+  }
   .our__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 250px);
@@ -66,6 +129,25 @@
 /* sm <= Medium (md) */
 
 @media (max-width: 768px) {
+  .our::after,
+  .our::before {
+    content: '';
+  }
+  .facts__list {
+    flex-wrap: wrap;
+  }
+  .facts__item {
+    max-width: 50%;
+  }
+  .supported {
+    height: auto;
+  }
+  .reviews__person {
+    grid-column: 1/-1;
+  }
+  .reviews__photo {
+    display: none;
+  }
   .our__slide.slick-slide {
     height: 340px;
   }
@@ -96,7 +178,6 @@
   }
   .head {
     font-size: 38px;
-    margin-bottom: 0;
   }
   .video__block-play {
     width: 50px;
@@ -169,6 +250,13 @@
   .sub {
     flex-direction: column;
     row-gap: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .supported__list {
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 120px);
   }
 }
 
