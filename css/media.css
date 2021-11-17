@@ -129,9 +129,18 @@
 /* sm <= Medium (md) */
 
 @media (max-width: 768px) {
-  .our::after,
-  .our::before {
-    content: '';
+  .news__grid {
+    grid-template-rows: 1fr 1fr;
+  }
+  .news__first-side {
+    grid-column: 1/7;
+  }
+  .news__second-side {
+    grid-column: 7/-1;
+  }
+  .news__third-side {
+    grid-row: 2/3;
+    grid-column: 1/7;
   }
   .facts__list {
     flex-wrap: wrap;
@@ -165,14 +174,6 @@
   .our__item {
     margin: 0 auto;
   }
-  .our__item:first-child {
-    margin-left: 0;
-    margin-right: auto;
-  }
-  .our__item:last-child {
-    margin-right: 0;
-    margin-left: auto;
-  }
   .our__list {
     flex-direction: column;
   }
@@ -196,23 +197,22 @@
     position: relative;
   }
   .nav__list {
+    position: absolute;
     transition: transform var(--transition);
-    transform: translateX(200%);
     z-index: 10;
     background-color: var(--white);
     text-align: center;
     flex-direction: column;
     row-gap: 35px;
     font-size: 35px;
-    position: absolute;
     top: 68px;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100vh;
     justify-content: center;
   }
   .nav__list.active {
-    transform: translateX(0);
+    left: 0;
   }
   .sub h3 {
     font-size: 25px;
@@ -226,6 +226,21 @@
 /* xs <= Small (sm) */
 
 @media (max-width: 576px) {
+  .news__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .news__first-side,
+  .news__second-side,
+  .news__third-side {
+    grid-column: 1/-1;
+  }
+  .news__second-side {
+    grid-row: 2/3;
+  }
+  .news__third-side {
+    grid-row: 3/4;
+  }
   .our__grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 300px);
@@ -254,6 +269,20 @@
 }
 
 @media (max-width: 425px) {
+  .sub h3 {
+    font-size: 20px;
+  }
+  .our-work__inner {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+  }
+  .form {
+    padding: 50px 20px;
+  }
+  .padding--big {
+    margin-top: 180px;
+  }
   .supported__list {
     justify-content: space-evenly;
     grid-template-columns: repeat(2, 120px);
