@@ -110,6 +110,10 @@
   fill: var(--white);
 }
 
+.black {
+  color: var(--gray-900) !important;
+}
+
 .sub {
   display: flex;
   align-items: center;

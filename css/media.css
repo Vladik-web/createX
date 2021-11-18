@@ -44,6 +44,12 @@
 /* md <= Large (lg) */
 
 @media (max-width: 992px) {
+  .projects__wrap img {
+    max-width: 400px;
+  }
+  .projects__inner {
+    gap: 40px;
+  }
   .last-block__form {
     grid-column: 7 / -1;
   }
@@ -139,6 +145,15 @@
 /* sm <= Medium (md) */
 
 @media (max-width: 768px) {
+  .projects__wrap img {
+    max-width: 100%;
+  }
+  .projects__inner {
+    flex-direction: column;
+  }
+  .reverce {
+    order: 2;
+  }
   .last-block__form {
     grid-column: 1 / -1;
     padding: 50px 20px;
