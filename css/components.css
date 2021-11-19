@@ -16,6 +16,12 @@
   text-transform: uppercase;
 }
 
+.btn--mega-large {
+  padding: 0 112px;
+  font-size: 16px;
+  line-height: 52px;
+}
+
 .btn--large {
   padding: 0 40px;
   font-size: 16px;
@@ -57,10 +63,12 @@
 .btn.btn--regular:hover,
 .btn.btn--large:hover,
 .btn.btn--mini:hover,
+.btn.btn--mega-large:hover,
 .btn.btn--small:focus,
 .btn.btn--regular:focus,
 .btn.btn--large:focus,
-.btn.btn--mini:focus {
+.btn.btn--mini:focus,
+.btn.btn--mega-large:focus {
   background-color: var(--white);
   color: var(--accent);
   border: 1px solid var(--accent);

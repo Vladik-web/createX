@@ -66,6 +66,18 @@ document.addEventListener('DOMContentLoaded', function() {
   headerBurgerBtn.addEventListener('click', () => {
     navList.classList.toggle('active');
     document.body.classList.toggle('active');
+  });
+  /* Accordion */
+  const offerTop = document.querySelectorAll('.offer__top');
+  offerTop.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+
+    })
+  })
+  const offerImage = document.querySelector('.last-block__form ');
+  window.addEventListener('mousemove', (e) => {
+    offerImage.style.transform = `translate(${-e.clientX /50	}px, ${-e.clientY /50}px)`
   })
 
 })
